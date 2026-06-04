@@ -7,7 +7,7 @@ from telegram.ext import (
     ContextTypes, ConversationHandler, CallbackQueryHandler
 )
 
-TOKEN = "8827798820:AAFP2GsKSPSXBGeGtP3sn3gu6Av5kDKTgBA"
+TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_USERNAME = "Alisha_Fire_Tribal"
 ADMIN_LINK = "https://t.me/Alisha_Fire_Tribal"
 FREE_LESSON_LINK = "https://t.me/+l890f77SujQ4Mjcy"

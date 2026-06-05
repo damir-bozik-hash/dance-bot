@@ -8,8 +8,8 @@ from telegram.ext import (
 )
 
 TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_USERNAME = "AlishaFireTribal"
-ADMIN_LINK = "https://t.me/AlishaFireTribal"
+ADMIN_USERNAME = "Alisha_Fire_Tribal"
+ADMIN_LINK = "https://t.me/Alisha_Fire_Tribal"
 FREE_LESSON_LINK = "https://t.me/+l890f77SujQ4Mjcy"
 DATA_FILE = "bot_data.json"
 

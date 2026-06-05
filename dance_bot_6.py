@@ -245,19 +245,15 @@ async def main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return COURSE_DANCED
 
-    elif   "бесплатный урок" in text.lower():
+       elif "бесплатный урок" in text.lower():
         user = update.effective_user
-        await notify_admin(context, user, "🎁 Хочет получить *бесплатный урок*.")
+        await notify_admin(context, user, "🎁 Хочет получить бесплатный урок.")
         await update.message.reply_text(
-            "🎁 Вот твой бесплатный урок — переходи и смотри! 👇",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("▶️ Смотреть бесплатный урок", url=FREE_LESSON_LINK)],
-                [InlineKeyboardButton("📩 Написать Алише", url=ADMIN_LINK)]
-            ])
+            "🎁 Напиши Алише — она отправит бесплатный урок лично 👇",
+            reply_markup=contact_inline_keyboard()
         )
-        await update.message.reply_text("👇", reply_markup=back_keyboard())
         return MAIN_MENU
-
+       
     elif "Стоимость" in text:
         await update.message.reply_text(
             "💰 *Стоимость занятий:*\n\n"

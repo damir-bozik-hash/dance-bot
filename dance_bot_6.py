@@ -245,7 +245,7 @@ async def main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return COURSE_DANCED
 
-       elif "бесплатный урок" in text.lower():
+    elif "бесплатный урок" in text.lower():
         user = update.effective_user
         await notify_admin(context, user, "🎁 Хочет получить бесплатный урок.")
         await update.message.reply_text(

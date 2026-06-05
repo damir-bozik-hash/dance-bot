@@ -127,7 +127,7 @@ def save_archetype_stat(archetype):
 
 def main_menu_keyboard():
     return ReplyKeyboardMarkup([
-        ["💃 Подобрать курс", "🎁 Получить бесплатный урок"],
+        ["💃 Подобрать курс", "🎁 Получить бесплатный урок"]
         ["💰 Стоимость занятий", "🌙 Архетипы в танце"],
         ["🔥 Танец с Огнём", "🌀 Что такое Tribal Fusion"],
         ["👩‍🏫 Обо мне", "⭐ Отзывы"],
@@ -245,7 +245,7 @@ async def main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return COURSE_DANCED
 
-    elif "Бесплатный урок" in text:
+    elif   "бесплатный урок" in text.lower():
         user = update.effective_user
         await notify_admin(context, user, "🎁 Хочет получить *бесплатный урок*.")
         await update.message.reply_text(
